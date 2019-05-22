@@ -40,7 +40,7 @@ class ApplicationWindow(QtWidgets.QMainWindow):
 
     def _update_canvas(self):
         self._dynamic_ax.clear()
-        t = np.linspace(0, 10, 101)
+        t = np.linspace(0, 10, 101) #(0, 10, 101)
         # Shift the sinusoid as a function of time.
         self._dynamic_ax.plot(t, np.sin(t + time.time()))
         self._dynamic_ax.figure.canvas.draw()
