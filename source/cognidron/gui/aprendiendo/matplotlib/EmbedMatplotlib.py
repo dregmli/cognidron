@@ -49,6 +49,7 @@ class Canvas(FigureCanvas):
         labels = ["Apples", "Bananas", "Melons"]
         ax = self.figure.add_subplot(111)
         ax.pie(x, labels=labels, )
+        
 
 
 app = QApplication(sys.argv)
