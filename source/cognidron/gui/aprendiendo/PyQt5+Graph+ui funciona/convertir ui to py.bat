@@ -1,0 +1,1 @@
+pyuic5 GraficaSimple.ui -o GraficaSimple.py

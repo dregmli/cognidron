@@ -1,0 +1,4 @@
+http://www.pythondiario.com/2014/11/primera-aplicacion-con-qt-designer-y_16.html
+
+
+En ese tuto se habla de como implementar los archivos .ui y conectarse con los subelementos desde python, con el ejemplo de un boton.
