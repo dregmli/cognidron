@@ -21,6 +21,7 @@ class MyWin(QtWidgets.QMainWindow):
   ptr = 0
   p6 = None
 
+
   def __init__ (self, parent=None):
         global curve, data, p6
 
@@ -36,7 +37,7 @@ class MyWin(QtWidgets.QMainWindow):
 
 
         x = np.random.normal(loc=0.0, scale=2, size=100)
-
+        
         widget = pg.PlotWidget(self.ui.centralwidget, title="Some plotting",)
         widget.setWindowTitle("Random Plottoring")
         #widget.plotItem.plot(x)
@@ -48,12 +49,19 @@ class MyWin(QtWidgets.QMainWindow):
         self.ui.grafica.setGeometry(QtCore.QRect(200, 10, 400, 400))
         self.ui.grafica.setObjectName("miGrafica")
 
-        timer = QtCore.QTimer()
         p6 = widget
-        print("se conectara el timer con updat")
-        timer.timeout.connect(self.update)
-        timer.start(5)
 
+        # Grafica de Updating plot
+        def update():
+            global curve, data, ptr, p6
+            curve.setData(data[ptr%10])
+            if ptr == 0:
+                p6.enableAutoRange('xy', False)  ## stop auto-scaling after the first data set is plotted
+            ptr += 1
+        timer = QtCore.QTimer()
+        timer.timeout.connect(update)
+        timer.start(50)
+        print("####")
 
      
 
@@ -62,7 +70,7 @@ class MyWin(QtWidgets.QMainWindow):
         #self.ui.btnBoton2.setGeometry(QtCore.QRect(60, 60, 75, 23))
         #self.ui.btnBoton2.setObjectName("btnBoton2")
 
-  def update():
+  def update2():
     
     global curve, data, ptr, p6
     print("esto se ejecuta? " + str(ptr))
@@ -70,6 +78,10 @@ class MyWin(QtWidgets.QMainWindow):
     if ptr == 0:
         p6.enableAutoRange('xy', False)  ## stop auto-scaling after the first data set is plotted
     ptr += 1
+
+  
+  def funcionx():
+    print("ok ------")
     
     
 
@@ -81,6 +93,11 @@ class MyWin(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
         app = QtWidgets.QApplication(sys.argv)
+        print("1: esto si sucede")
         myapp = MyWin()
+        print("2: esto si sucede")
         myapp.show()
+
+        print("3: esto si sucede")
         sys.exit(app.exec_())
+        print("4: esto si sucede")
