@@ -26,7 +26,7 @@ class Ventana(QMainWindow):
         #ejemplo cambiar el titulo
         #self.setWindowTitle("Cambiando el título desde código")
 
-#Instancia para inciar una aplicación
+# Instancia para inciar una aplicación
 app = QApplication(sys.argv)
 
 #Crear un objeto de la clase Ventana

@@ -5,7 +5,7 @@
 import sys 
 
 #esto es temporal, mientras no se corre el mainpy desde el root de cognidron
-sys.path.append("D:\\Usuarines\\mora dulce\\Documentox\\PythonProjects\\Cognidron Dev\\source\\cognidron\\gui\\ventanas")
+sys.path.append("/Users/alumno/Desktop/dregmli/cognidron/source/cognidron/gui/ventanas")
     
 print(sys.path)
 
@@ -89,6 +89,7 @@ class MiHilo(threading.Thread):
     def update(self):
       print("esto se ejecuta? " + str(self.ptr))
       self.curve.setData(self.data[self.ptr%10])
+
       if self.ptr == 0:
           self.p6.enableAutoRange('xy', False)  ## stop auto-scaling after the first data set is plotted
       self.ptr += 1
@@ -98,7 +99,7 @@ class MiHilo(threading.Thread):
       while self.n < self.breaker: 
         self.n += 1
         self.update()
-        time.sleep(0.02)
+        time.sleep(0.1)
         print("####")
       
       
