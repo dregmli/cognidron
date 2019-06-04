@@ -1,4 +1,5 @@
-
+#informacion muy util de hilos:
+#   https://python-para-impacientes.blogspot.com/2016/12/threading-programacion-con-hilos-i.html
 
 
 import sys 
@@ -8,6 +9,7 @@ sys.path.append("D:\\Usuarines\\mora dulce\\Documentox\\PythonProjects\\Cognidro
     
 print(sys.path)
 
+import time
 import numpy as np
 import pyqtgraph as pg 
 from BandaSimple import *
@@ -16,14 +18,8 @@ from BandaSimple import *
 
 
 class MyWin(QtWidgets.QMainWindow):
-  curve = None
-  data = None
-  ptr = 0
-  p6 = None
-
 
   def __init__ (self, parent=None):
-        global curve, data, p6
 
         #configuracion de inicio
         #sys.append("../..") #ruta root del programa: cognidron/
@@ -51,36 +47,21 @@ class MyWin(QtWidgets.QMainWindow):
 
         p6 = widget
 
-        # Grafica de Updating plot
-        def update():
-            global curve, data, ptr, p6
-            curve.setData(data[ptr%10])
-            if ptr == 0:
-                p6.enableAutoRange('xy', False)  ## stop auto-scaling after the first data set is plotted
-            ptr += 1
-        timer = QtCore.QTimer()
-        timer.timeout.connect(update)
-        timer.start(50)
-        print("####")
+        #Generar hilo para graficar
+        self.funcionx()
+        hilo = MiHilo(ptr, p6, curve, data)
+        hilo.start()
 
-     
+        
+
 
 
         #self.ui.btnBoton2 = QtWidgets.QPushButton(self.ui.centralwidget)
         #self.ui.btnBoton2.setGeometry(QtCore.QRect(60, 60, 75, 23))
         #self.ui.btnBoton2.setObjectName("btnBoton2")
 
-  def update2():
-    
-    global curve, data, ptr, p6
-    print("esto se ejecuta? " + str(ptr))
-    curve.setData(data[ptr%10])
-    if ptr == 0:
-        p6.enableAutoRange('xy', False)  ## stop auto-scaling after the first data set is plotted
-    ptr += 1
-
   
-  def funcionx():
+  def funcionx(self):
     print("ok ------")
     
     
@@ -89,6 +70,38 @@ class MyWin(QtWidgets.QMainWindow):
   # Evento del boton btn_CtoF
   def btn_tocado(self):
     print("me diste un clic")
+
+
+
+
+import threading
+class MiHilo(threading.Thread):
+    breaker = 1000000
+    n = 0
+
+    def __init__(self, ptr, p6, curve, data):
+      super().__init__(daemon=True) #esto hace daemon a un hilo para que se cierre cuadno el hilo principal se cierre.
+      self.ptr = ptr
+      self.p6 = p6
+      self.curve = curve
+      self.data = data
+
+    def update(self):
+      print("esto se ejecuta? " + str(self.ptr))
+      self.curve.setData(self.data[self.ptr%10])
+      if self.ptr == 0:
+          self.p6.enableAutoRange('xy', False)  ## stop auto-scaling after the first data set is plotted
+      self.ptr += 1
+
+
+    def run(self):
+      while self.n < self.breaker: 
+        self.n += 1
+        self.update()
+        time.sleep(0.02)
+        print("####")
+      
+      
 
 
 if __name__ == "__main__":
