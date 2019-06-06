@@ -4,7 +4,10 @@ from websocket import create_connection
 import ssl
 #ws = create_connection("wss://emotivcortex.com:54321") #ws://echo.websocket.org/
 
-ws = create_connection("wss://emotivcortex.com:54321",
+"""ws = create_connection("wss://emotivcortex.com:54321",
+  sslopt={"cert_reqs": ssl.CERT_NONE})"""
+
+ws = create_connection("wss://localhost:6868",
   sslopt={"cert_reqs": ssl.CERT_NONE})
 
 

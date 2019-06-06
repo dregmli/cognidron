@@ -23,12 +23,12 @@ conteo = 0
 mensaje = ""
 
 #conectamos el WS
-ws = create_connection("wss://emotivcortex.com:54321",
-sslopt={"cert_reqs": ssl.CERT_NONE})
+#ws = create_connection("wss://emotivcortex.com:54321", sslopt={"cert_reqs": ssl.CERT_NONE})
+ws = create_connection("wss://localhost:6868", sslopt={"cert_reqs": ssl.CERT_NONE})
 
 def principal():
     #ws = create_connection("wss://emotivcortex.com:54321") #ws://echo.websocket.org/
-    #1. 
+    #1.
     mensaje = ' {"jsonrpc": "2.0", "method": "queryHeadsets","params": {},"id": 1} '
     ejecutar(mensaje)
 
