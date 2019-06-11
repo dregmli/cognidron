@@ -1,7 +1,7 @@
 """ Se siguen los pasos para establecer conexion con el emotiv app en mac os x
-    Esta vez, usando el login por codigo en lugar de usar el Cortex GUI
+    Usando Cortex v2.0
 
-    Fecha: 6 de junio 2019
+    Actualziación: 11 de junio 2019
 """
 
 from websocket import create_connection
@@ -9,6 +9,11 @@ import ssl
 import json
 
 
+clientId = "3nQdijGriE91rx1CPFvdQiDUrHpN1Ore2tXonEE2"
+clientSecret = "mm25AgYCqSvGQd8Onrz7uX4tSWO3zY6RLGo66oEomO3ubRH00lhs7EyhGTr1cAqY7nuATvDFAfuZFQyRymFyP0knjVtzlZXVAmsJrp5nShr9p1NCcqoNIURJ553k7bAK"
+answer = ""
+token = None
+headset = ""
 
 URLwebsocket = "wss://localhost:6868"  # anteriormente era wss://emotivcortex.com:54321
 
@@ -17,7 +22,7 @@ print("Comenzando...")
 
 # 1. Conectarse con el websocket del emotiv app cortex
 print("1. Estableciendo conexión con websocket", URLwebsocket)
-ws = create_connection("wss://localhost:6868", sslopt={"cert_reqs": ssl.CERT_NONE})
+ws = create_connection(URLwebsocket, sslopt={"cert_reqs": ssl.CERT_NONE})
 
 
 # Función para mandar mensajes string JSon al Emotiv Cortex
@@ -34,42 +39,84 @@ def ejecutar(txt):
     print("Received '%s'" % result)
     return result
 
+# Para finalizar el programa desde un punto determinado
+def terminar():
+    # Y al final, cerrar la conexión
+    ws.close()
+    print("Finalizando aplicación")
+    exit()
 
-# 2. Saber si existen headsets conectados
-print("2. hHeadsets conectados: ")
-# mensaje = ' {"jsonrpc": "2.0", "method": "queryHeadsets","params": {},"id": 1} '
+
+
+# 2. RequestAccess: solicitar permiso al usrio por medio de Emotiv App
+print("2. Hacer RequestAccess: ")
+mensaje = """{
+                "id": 1,
+                "jsonrpc": "2.0",
+                "method": "requestAccess",
+                "params": {
+                    "clientId": "%s",
+                    "clientSecret": "%s"
+                }
+            }""" % (clientId, clientSecret)
+ejecutar(mensaje)
+
+
+
+
+
+
+
+
+
+
+
+# Autorización+
+mensaje = """{
+                "id": 1,
+                "jsonrpc": "2.0",
+                "method": "authorize",
+                "params": {
+                    "clientId": "%s",
+                    "clientSecret": "%s"
+                }
+            }""" % (clientId, clientSecret)
+answer = ejecutar(mensaje)
+dic = json.loads(answer)
+token = dic["result"]["cortexToken"]
+print("@@@@@@@@@@@@@@@@@@@@")
+print(dic)
+print("token es: ", token)
+
+
+# . Saber si existen headsets conectados
+print("\n>> Headsets disponibles: ")
 mensaje = """{"jsonrpc": "2.0", 
                 "method": "queryHeadsets",
                 "params": {},
                 "id": 1
             }"""
-ejecutar(mensaje)
+answer = ejecutar(mensaje)
+dic = json.loads(answer)
+if 'dongle' in answer:
+    headset = dic["result"][0]["id"]
+    print("id del headset: ", headset)
+else:
+    print("Error: No hay ningun headset disponible")
+    terminar()
 
 
+# conectarse con el headset con controlDevice
+print(">> Conectarse con el headset: ")
 mensaje = """{
-    "jsonrpc": "2.0",
-    "method": "getUserLogin",
-    "id": 1
-  }"""
-ejecutar(mensaje)
-
-
-
-# 3. Login
-print("3. Login to emotiv cloud")
-mensaje = """{
-    "jsonrpc": "2.0",
-    "method": "login",
-    "params": {
-      "username": "",
-      "password": "",
-      "client_id": "",
-      "client_secret": ""
-    },
-    "id": 1
-  }"""
-
-
+                "id": 1,
+                "jsonrpc": "2.0",
+                "method": "controlDevice",
+                "params": {
+                    "command": "connect",
+                    "headset": "%s"
+                }
+            }""" % headset
 ejecutar(mensaje)
 
 
@@ -77,12 +124,6 @@ ejecutar(mensaje)
 
 
 
+terminar()
 
-print("Como se llama")
-# nombre = input()
-# print("Hola", nombre)
-
-
-# Y al final, cerrar la conexión
-ws.close()
 
