@@ -7,13 +7,16 @@
 from websocket import create_connection
 import ssl
 import json
+import time
 
 
-clientId = "3nQdijGriE91rx1CPFvdQiDUrHpN1Ore2tXonEE2"
-clientSecret = "mm25AgYCqSvGQd8Onrz7uX4tSWO3zY6RLGo66oEomO3ubRH00lhs7EyhGTr1cAqY7nuATvDFAfuZFQyRymFyP0knjVtzlZXVAmsJrp5nShr9p1NCcqoNIURJ553k7bAK"
+clientId = ""
+clientSecret = ""
 answer = ""
 token = None
 headset = ""
+sesion = ""
+profile = "gogo"
 
 URLwebsocket = "wss://localhost:6868"  # anteriormente era wss://emotivcortex.com:54321
 
@@ -39,8 +42,26 @@ def ejecutar(txt):
     print("Received '%s'" % result)
     return result
 
+# Cerrar sesion
+def cerrarSesion():
+    if sesion != "":
+        print(">> Cerrando sesión...: ")
+        mensaje = """{
+                        "id": 1,
+                        "jsonrpc": "2.0",
+                        "method": "updateSession",
+                        "params": {
+                            "cortexToken": "%s",
+                            "session": "%s",
+                            "status": "close"
+                        }
+                    }""" % (token, sesion)
+        ejecutar(mensaje)
+
+
 # Para finalizar el programa desde un punto determinado
 def terminar():
+    #cerrarSesion()
     # Y al final, cerrar la conexión
     ws.close()
     print("Finalizando aplicación")
@@ -106,7 +127,7 @@ else:
     terminar()
 
 
-# conectarse con el headset con controlDevice
+# Conectarse con el headset con controlDevice
 print(">> Conectarse con el headset: ")
 mensaje = """{
                 "id": 1,
@@ -120,8 +141,67 @@ mensaje = """{
 ejecutar(mensaje)
 
 
+# Iniciar la sesión
+print(">> Iniciando la sesión")
+mensaje = """{
+                "id": 1,
+                "jsonrpc": "2.0",
+                "method": "createSession",
+                "params": {
+                    "cortexToken": "%s",
+                    "headset": "%s",
+                    "status": "open"
+                }
+            }""" % (token, headset)
+answer = ejecutar(mensaje)
+
+if 'appId' in answer:
+    dic = json.loads(answer)
+    sesion = dic['result']['id']
+else:
+    print("Error: Problemas al iiciar sesión con el dispositivo")
+    terminar()
+print('sesion : ', sesion )
 
 
+# Cargar un perfil para comenados mentales
+print(">> Cargar perfil")
+mensaje = """{
+                "id": 1,
+                "jsonrpc": "2.0",
+                "method": "setupProfile",
+                "params": {
+                    "cortexToken": "%s",
+                    "headset": "%s",
+                    "profile": "%s",
+                    "status": "load"
+                }
+            }""" % (token, headset, profile)
+answer = ejecutar(mensaje)
+
+
+# Suscribirse a comandos mentales y faciales
+print(">> Suscribirse")
+mensaje = """{
+                "id": 1,
+                "jsonrpc": "2.0",
+                "method": "subscribe",
+                "params": {
+                    "cortexToken": "%s",
+                    "session": "%s",
+                    "streams": ["com"]
+                }
+            }""" % (token, sesion)
+answer = ejecutar(mensaje)
+
+result = ws.recv()
+print("Received '%s'" % result)
+i = 0
+while i < 400:
+    result = ws.recv()
+    print("Received '%s'" % result)
+    i += 1
+    time.sleep(0.1)
 
 
 terminar()

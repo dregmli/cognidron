@@ -1,0 +1,18 @@
+Se enlistan los progrmas y paquetes necesarios para hacer funcionar el presente codigo
+
+--------------------------------------------------
+---------          SOFTWARES            ----------
+- python 3.7
+- Emotiv App Cortex v2
+- QTDesigner
+- Unity 3D  2018.4.2f1
+
+
+
+--------------------------------------------------
+---------       PYTHON PACKAGES         ----------
+
+- PyQT5
+- PyQTGraph
+- numpy
+- pyzmq
