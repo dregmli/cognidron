@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab428678-5afe-4887-9bbb-7d4a4a8d207b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/App.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces_esp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces_esp/simulador/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces_esp/simulador/simdrouAdapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces_esp/simulador/simuladorInterfaz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces_gen/simulador/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces_gen/simulador/simuladorImp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimentos/websocket_client/control dron virtual.py" beforeDir="false" afterPath="$PROJECT_DIR$/experimentos/websocket_client/control dron virtual.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces_gen/dron/simulador/testUnitySocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces_gen/simulador/testUnitySocket.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,22 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experimentos/websocket_client/pasos para inicar 2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2595">
-              <caret line="176" column="36" selection-end-line="209" />
-              <folding>
-                <element signature="e#144#183#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/experimentos/websocket_client/control dron virtual.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="427">
+              <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
               <folding>
                 <element signature="e#237#276#0" expanded="true" />
               </folding>
@@ -40,23 +35,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interfaces_gen/dron/simulador/testUnitySocket.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interfaces_esp/simulador/simdrouAdapter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="170">
+              <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+              <folding>
+                <element signature="e#170#242#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../Unity3D-Python-Communication/PythonFiles/server.py">
+        <entry file="file://$PROJECT_DIR$/interfaces_esp/simulador/simuladorInterfaz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="25" />
-              <folding>
-                <element signature="e#131#142#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interfaces_gen/simulador/simuladorImp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -73,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../../Unity3D-Python-Communication/UnityProject/Assets/MyScripts/HelloRequester2.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="12">
               <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
@@ -127,6 +140,11 @@
         <option value="$PROJECT_DIR$/../../../Unity3D-Python-Communication/UnityProject/Assets/MyScripts/HelloRequester2.cs" />
         <option value="$PROJECT_DIR$/../../../Unity3D-Python-Communication/UnityProject/Assets/MyScripts/InterfazPython.cs" />
         <option value="$PROJECT_DIR$/experimentos/websocket_client/control dron virtual.py" />
+        <option value="$PROJECT_DIR$/interfaces_esp/simulador/simuladorAdapter.py" />
+        <option value="$PROJECT_DIR$/App.py" />
+        <option value="$PROJECT_DIR$/interfaces_esp/simulador/simuladorInterfaz.py" />
+        <option value="$PROJECT_DIR$/interfaces_gen/simulador/simuladorImp.py" />
+        <option value="$PROJECT_DIR$/interfaces_esp/simulador/simdrouAdapter.py" />
       </list>
     </option>
   </component>
@@ -142,7 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,30 +170,13 @@
             <path>
               <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
               <item name="cognidron" type="462c0819:PsiDirectoryNode" />
-              <item name="experimentos" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces_esp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
               <item name="cognidron" type="462c0819:PsiDirectoryNode" />
-              <item name="experimentos" type="462c0819:PsiDirectoryNode" />
-              <item name="websocket_client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cognidron" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cognidron" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="controladores" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cognidron" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="ventanas" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces_esp" type="462c0819:PsiDirectoryNode" />
+              <item name="simulador" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
@@ -187,19 +187,19 @@
               <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
               <item name="cognidron" type="462c0819:PsiDirectoryNode" />
               <item name="interfaces_gen" type="462c0819:PsiDirectoryNode" />
-              <item name="dron" type="462c0819:PsiDirectoryNode" />
+              <item name="nf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cognidron" type="b2602c69:ProjectViewProjectNode" />
               <item name="cognidron" type="462c0819:PsiDirectoryNode" />
               <item name="interfaces_gen" type="462c0819:PsiDirectoryNode" />
-              <item name="dron" type="462c0819:PsiDirectoryNode" />
               <item name="simulador" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,6 +209,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/interfaces_gen" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Usuarines\mora dulce\Documentox\PythonProjects\Cognidron Dev\source\cognidron\gui\controladores" />
     </key>
@@ -225,7 +228,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.control dron virtual">
+  <component name="RunManager" selected="Python.App">
+    <configuration name="App" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cognidron" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/App.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="control dron virtual" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cognidron" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -239,48 +263,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experimentos/websocket_client/control dron virtual.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pasos para inicar 2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="cognidron" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experimentos/websocket_client" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experimentos/websocket_client/pasos para inicar 2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pasos para iniciar" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="cognidron" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experimentos/websocket_client" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experimentos/websocket_client/pasos para iniciar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -310,7 +292,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="wss_cliente" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="simdrouAdapter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cognidron" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -318,11 +300,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experimentos/websocket_client" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interfaces_esp/simulador" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experimentos/websocket_client/wss_cliente.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interfaces_esp/simulador/simdrouAdapter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="simuladorImp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cognidron" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interfaces_gen/simulador" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/interfaces_gen/simulador/simuladorImp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -333,11 +336,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.App" />
+        <item itemvalue="Python.simuladorImp" />
+        <item itemvalue="Python.simdrouAdapter" />
         <item itemvalue="Python.control dron virtual" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.pasos para inicar 2" />
-        <item itemvalue="Python.wss_cliente" />
-        <item itemvalue="Python.pasos para iniciar" />
       </list>
     </recent_temporary>
   </component>
@@ -356,13 +359,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49936306" visible="true" weight="0.19591261" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50063694" side_tool="true" weight="0.19591261" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22547771" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22547771" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -432,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaces_gen/dron/simulador/testUnitySocket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../Unity3D-Python-Communication/PythonFiles/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -446,20 +443,6 @@
           <folding>
             <element signature="e#131#142#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Unity3D-Python-Communication/UnityProject/Assets/MyScripts/InterfazPython.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Unity3D-Python-Communication/UnityProject/Assets/MyScripts/HelloRequester2.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -480,12 +463,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interfaces_esp/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaces_gen/simulador/testUnitySocket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Unity3D-Python-Communication/UnityProject/Assets/MyScripts/InterfazPython.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Unity3D-Python-Communication/UnityProject/Assets/MyScripts/HelloRequester2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/experimentos/websocket_client/control dron virtual.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="427">
+          <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
           <folding>
             <element signature="e#237#276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaces_gen/simulador/simuladorImp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaces_esp/simulador/simuladorInterfaz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interfaces_esp/simulador/simdrouAdapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="e#170#242#0" expanded="true" />
           </folding>
         </state>
       </provider>
