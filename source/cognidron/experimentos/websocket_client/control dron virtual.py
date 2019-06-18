@@ -19,7 +19,7 @@ answer = ""
 token = None
 headset = ""
 sesion = ""
-profile = "gogo"
+profile = "nay"
 
 URLwebsocket = "wss://localhost:6868"  # anteriormente era wss://emotivcortex.com:54321
 
