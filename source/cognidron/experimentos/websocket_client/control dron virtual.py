@@ -13,13 +13,13 @@ import time
 import zmq
 
 
-clientId = "3nQdijGriE91rx1CPFvdQiDUrHpN1Ore2tXonEE2"
-clientSecret = "mm25AgYCqSvGQd8Onrz7uX4tSWO3zY6RLGo66oEomO3ubRH00lhs7EyhGTr1cAqY7nuATvDFAfuZFQyRymFyP0knjVtzlZXVAmsJrp5nShr9p1NCcqoNIURJ553k7bAK"
+clientId = ""
+clientSecret = ""
 answer = ""
 token = None
 headset = ""
 sesion = ""
-profile = "nay"
+profile = "gogo"
 
 URLwebsocket = "wss://localhost:6868"  # anteriormente era wss://emotivcortex.com:54321
 

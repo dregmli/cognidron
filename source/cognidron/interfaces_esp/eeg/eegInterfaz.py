@@ -5,15 +5,16 @@
 from abc import ABC, abstractmethod
 
 
-class SimuladorInterfaz(ABC):
+class EegInterfaz(ABC):
     """
-        Interfaz abstracta que debe implementarse para conectar el cognidron con el simulador de drones.
+        Interfaz abstracta que debe implementarse para conectar el cognidron con el dispositivo de EEG.
     """
 
     conectado = False
+    # para saber si se encuentra conectado con el dispositivo EEG
 
     def __init__(self):
-        print(":)")
+        pass
 
     @abstractmethod
     def decirHola(self):

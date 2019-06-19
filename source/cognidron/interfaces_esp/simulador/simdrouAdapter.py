@@ -16,6 +16,11 @@ class SimdrouAdapter(SimuladorInterfaz):
 
     context = None
     socket = None
+    # conectado = False
+
+    # esta conexión usando ZMQ con unity tiene una peculiaridad, que se debe recibir mensaje paara poder enviar uno.
+    recibido = False
+
 
     def decirHola(self):
         print("Que ondas brothersss!!!")
@@ -23,21 +28,50 @@ class SimdrouAdapter(SimuladorInterfaz):
 
     def iniciarConexion(self):
         print("Inciando servidor de sockets en " + self.url)
-        self.context = zmq.Context()
-        self.socket = self.context.socket(zmq.REP)
-        self.socket.bind(self.url)
+        try:
+            self.context = zmq.Context()
+            self.socket = self.context.socket(zmq.REP)
+            self.socket.bind(self.url)
+            self.conectado = True
+        except:
+            self.conectado = False
+            print("Error!!: al iniciar el servidor de socket en " + self.url)
+
+
 
 
     def cerrarConexion(self):
-        pass  # al parecer el socket de ZMQ no tiene método de cerrar
+        self.conectado = False
+        # al parecer el socket de ZMQ no tiene método de cerrar
 
     def recibirMensaje(self):
-        message = self.socket.recv()
-        print("Received request: %s" % message)
-        return message
+        if self.conectado:
 
-    def enviarMensaje(self, message):
-        self.socket.send(bytes(message, 'utf-8'))
+            if self.recibido:  # si no se ha enviado un mensaje antes, se envia uno vacio
+                self.enviarMensaje("vacio")
+
+            mensaje = self.socket.recv()
+            print("Received request: %s" % mensaje)
+            mensaje = str(mensaje)  # no se exactamente que recibo pero lo convierto a string para manipularlo
+            mensaje = mensaje[2:-1] # se reciben mensajes como b'hola' y hay que recortar a hola
+            print("Received request: %s" % mensaje)
+            self.recibido = True
+            return mensaje
+        else:
+            print("Error!! al recibir mensaje: No hay servidor establecido previamente")
+            message = ""
+            return message
+
+
+    def enviarMensaje(self, mensaje):
+        if self.conectado:
+            if not self.recibido:  # Si no se ha recibido un mensaje previamente, se recibe
+                self.recibirMensaje()
+
+            self.socket.send(bytes(mensaje, 'utf-8'))
+            self.recibido = False
+        else:
+            print("Error!! al enviar mensaje: No hay servidor establecido previamente")
 
     def prueba(self):
 
@@ -57,6 +91,18 @@ class SimdrouAdapter(SimuladorInterfaz):
 
         self.recibirMensaje()
         self.enviarMensaje("Hola mundo 04")
+
+        print("--------------------")
+
+        self.enviarMensaje("vientos")
+        self.enviarMensaje("huracanados")
+        self.enviarMensaje("geniales")
+        self.enviarMensaje("y frescos")
+
+        self.recibirMensaje()
+        self.recibirMensaje()
+        self.recibirMensaje()
+        self.recibirMensaje()
 
         # Por ultimo, cerrar conexión
         self.cerrarConexion()

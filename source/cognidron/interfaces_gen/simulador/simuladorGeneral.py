@@ -5,7 +5,7 @@
 from interfaces_esp.simulador.simdrouAdapter import SimdrouAdapter
 
 
-class SimuladorImp:
+class SimuladorGeneral:
     # Clase que Implementa una interfaz especifica de un simulador de drones.
 
     def __init__(self):
