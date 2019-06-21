@@ -67,7 +67,7 @@ class SimdrouAdapter(SimuladorInterfaz):
         if self.conectado:
             if not self.recibido:  # Si no se ha recibido un mensaje previamente, se recibe
                 self.recibirMensaje()
-
+            print("simdrou: >> enviando: " + mensaje)
             self.socket.send(bytes(mensaje, 'utf-8'))
             self.recibido = False
         else:

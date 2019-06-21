@@ -1,13 +1,4 @@
-"""
-Clase para conectar Cognidron con el headset de Emotiv implementando el API de Emotiv Cortex V2.0
 
-Fecha: Miércoles 19 de Junio 2019
-Author: dregmli
-
-Basado en los modulos experimentales "control dron virtual.py" y otros del paquete "cognidron.experimentos.websocket_client"
-
-Para realizar la conexión con Emotiv Cortex v2.0 se usan websockets.
-"""
 
 
 from websocket import create_connection
@@ -19,20 +10,42 @@ from interfaces_esp.eeg.eegInterfaz import EegInterfaz
 
 
 class EmotivAdapter(EegInterfaz):
+    """
+    Clase para conectar Cognidron con el headset de Emotiv implementando el API de Emotiv Cortex V2.0
+
+    Fecha: Miércoles 19 de Junio 2019
+    Author: dregmli
+
+    Basado en los modulos experimentales "control dron virtual.py" y otros del paquete "cognidron.experimentos.websocket_client"
+    Para realizar la conexión con Emotiv Cortex v2.0 se usan websockets.
+
+    Instrucciones de uso:
+        1) Establecer los parametros de clientId, clientSecret y profile
+        2) Iniciar conexión: iniciarConexion()
+        3) Iniciar sesión: iniciarSesion()
+        4) Si es primera vez, el Emotiv App pedirá por afuera permiso al usuario para utilizar a cognidron.
+        5) Ya solo usar recibirMensaje() para estar recibiendo los datos de Cortex
+
+    """
 
 
-
-    # conectado = False
+    # conectado = False  # está en la interfaz EegInterfaz
 
     # PENDIENTE: que obtenga la informacion de clientID y clientSecret desde un archivo de txt
 
-    clientId = ""
-    clientSecret = ""
+    # - - - - - - - - - - - - - - - - -
+    # Nesesarias definiarlas previamente
+    clientId = "3nQdijGriE91rx1CPFvdQiDUrHpN1Ore2tXonEE2"
+    clientSecret = "mm25AgYCqSvGQd8Onrz7uX4tSWO3zY6RLGo66oEomO3ubRH00lhs7EyhGTr1cAqY7nuATvDFAfuZFQyRymFyP0knjVtzlZXVAmsJrp5nShr9p1NCcqoNIURJ553k7bAK"
+    profile = "gogo"
+    # - - - - - - - - - - - - - - - - -
+
+    # Estas las define el programa por si solas
     answer = ""
     token = None
     headset = ""
     sesion = ""
-    profile = "gogo"
+
     ws = None
 
     URLwebsocket = "wss://localhost:6868"  # anteriormente en Cortex v1.x era wss://emotivcortex.com:54321
@@ -41,10 +54,15 @@ class EmotivAdapter(EegInterfaz):
 
 
     def iniciarConexion(self):
+        """
+        Iniciar la conexión por websocket a Cortex v2.0
+        :return: nothing.
+        """
         print("Iniciando conexión de websocket client a " + self.URLwebsocket)
         try:
             self.ws = create_connection(self.URLwebsocket, sslopt={"cert_reqs": ssl.CERT_NONE})
-            self.conectado = True
+            self.conectado = True  # Importante que vaya aqui, para que pueda funconar iniciarSesion()
+            self.__iniciarSesion()
         except:
             self.conectado = False
             print("Error!!: al conectarse como websocket client a " + self.URLwebsocket)
@@ -82,7 +100,7 @@ class EmotivAdapter(EegInterfaz):
     # Métodos particulares para el Emotiv Cortex V2.0
 
 
-    def iniciarSesion(self):
+    def __iniciarSesion(self):
         """
         Se realizan todos los pasos necesarios para iniciar la sesión con Cortex v2.0
         :return:
@@ -167,14 +185,14 @@ class EmotivAdapter(EegInterfaz):
 
         if 'appId' in answer:
             dic = json.loads(answer)
-            sesion = dic['result']['id']
+            self.sesion = dic['result']['id']
         else:
             print("Error: Problemas al iniciar sesión con el dispositivo en Cortex")
             self.cerrarConexion()
-        print('sesion : ', sesion)
+        print('sesion : ', self.sesion)
 
 
-        # Cargar un perfil para comenados mentales
+        # Cargar un perfil para comandos mentales
         print(">> Cargar perfil")
         mensaje = """{
                         "id": 1,

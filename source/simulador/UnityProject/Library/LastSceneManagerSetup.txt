@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/NetMQExample/Scenes/Dron.unity
+  isLoaded: 1
+  isActive: 1

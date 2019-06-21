@@ -16,10 +16,6 @@ class EegInterfaz(ABC):
     def __init__(self):
         pass
 
-    @abstractmethod
-    def decirHola(self):
-        # Debes implementar este método para decir hola como tu quieras
-        pass
 
     @abstractmethod
     def iniciarConexion(self):
