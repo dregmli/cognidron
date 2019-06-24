@@ -37,7 +37,7 @@ class EmotivAdapter(EegInterfaz):
     # Nesesarias definiarlas previamente
     clientId = ""
     clientSecret = ""
-    profile = "gogo"
+    profile = "alguien"
     # - - - - - - - - - - - - - - - - -
 
     # Estas las define el programa por si solas
@@ -165,7 +165,7 @@ class EmotivAdapter(EegInterfaz):
                             "command": "connect",
                             "headset": "%s"
                         }
-                    }""" % self. headset
+                    }""" % self.headset
         self.enviarMensaje(mensaje)
 
 
