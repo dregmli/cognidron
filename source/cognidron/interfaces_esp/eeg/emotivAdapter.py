@@ -37,7 +37,7 @@ class EmotivAdapter(EegInterfaz):
     # Nesesarias definiarlas previamente
     clientId = ""
     clientSecret = ""
-    profile = "alguien"
+    profile = ""
     # - - - - - - - - - - - - - - - - -
 
     # Estas las define el programa por si solas
