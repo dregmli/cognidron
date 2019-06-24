@@ -12,7 +12,8 @@ Se enlistan los progrmas y paquetes necesarios para hacer funcionar el presente 
 --------------------------------------------------
 ---------       PYTHON PACKAGES         ----------
 
-- PyQT5
-- PyQTGraph
-- numpy
-- pyzmq
+- PyQT5 5.12.2
+- pyqtgraph 0.10.0 
+- numpy 1.16.4
+- pyzmq 18.0.1
+- websocket-client 0.56.0

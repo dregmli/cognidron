@@ -1,5 +1,5 @@
-from interfaces_esp.eeg.emotivAdapter import EmotivAdapter
-from interfaces_esp.simulador.simdrouAdapter import SimdrouAdapter
+from interfaces.eeg.emotivAdapter import EmotivAdapter
+from interfaces.simulador.simdrouAdapter import SimdrouAdapter
 import json
 import time
 
