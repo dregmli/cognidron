@@ -64,7 +64,7 @@ public class InterfazPython : MonoBehaviour
         }
 
         //Para abajo
-        if (Input.GetKey(KeyCode.J)) {
+        if (Input.GetKey(KeyCode.K)) {
             myTransform.Translate(new Vector3(0,-1*speed,0) * Time.deltaTime);
         }
 
