@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Algunos tutos: 
+https://medium.com/@yonem9/parte-2-fundamentos-unity-gameplay-mover-rotar-y-animar-un-personaje-3d-838bd6fa5bdb
+documentation: https://docs.unity3d.com/2018.4/Documentation/ScriptReference/Rigidbody.html
+pendiente ver esto: https://www.youtube.com/watch?v=II3JVtFelHg
+
+ */
+
+
 public class Fuerzas : MonoBehaviour
 {
 	public int fuerza = 10;
