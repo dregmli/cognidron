@@ -277,6 +277,8 @@ GameObject:
   - component: {fileID: 1404203937}
   - component: {fileID: 1404203942}
   - component: {fileID: 1404203941}
+  - component: {fileID: 1404203943}
+  - component: {fileID: 1404203944}
   m_Layer: 0
   m_Name: Cubzul
   m_TagString: Untagged
@@ -350,7 +352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404203936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 67.6, z: 0}
+  m_LocalPosition: {x: 0, y: 2.73, z: 6.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -363,7 +365,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404203936}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c1080655bfd84f70bcd34584fd515cb, type: 3}
   m_Name: 
@@ -381,13 +383,42 @@ Rigidbody:
   m_GameObject: {fileID: 1404203936}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!75 &1404203943
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404203936}
+  m_Enabled: 0
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!114 &1404203944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404203936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a0758af83d847d6b97950224c4f3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pid:
+    pFactor: 0.1
+    iFactor: 0.1
+    dFactor: 0
+  setY: 2
 --- !u!1 &2039150007
 GameObject:
   m_ObjectHideFlags: 0
