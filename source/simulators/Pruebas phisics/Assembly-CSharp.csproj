@@ -60,12 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PID.cs" />
-    <Compile Include="Assets\PIDTest.cs" />
-    <Compile Include="Assets\Scripts\FuerzaConstante.cs" />
-    <Compile Include="Assets\Scripts\Fuerzas.cs" />
-    <Compile Include="Assets\Scripts\Movimiento.cs" />
-    <Compile Include="Assets\Scripts\PruebaPID.cs" />
+    <Compile Include="Assets\PIDpackage\CubeTest\ScriptsFuerzas\FuerzaConstante.cs" />
+    <Compile Include="Assets\PIDpackage\CubeTest\ScriptsFuerzas\Fuerzas.cs" />
+    <Compile Include="Assets\PIDpackage\CubeTest\ScriptsFuerzas\Movimiento.cs" />
+    <Compile Include="Assets\PIDpackage\CubeTest\ScriptsFuerzas\PruebaPID.cs" />
+    <Compile Include="Assets\PIDpackage\PID\PID.cs" />
+    <Compile Include="Assets\PIDpackage\PID\PIDTest.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/alumno/Desktop/dregmli/cognidron/source/simulators/Pruebas phisics/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
