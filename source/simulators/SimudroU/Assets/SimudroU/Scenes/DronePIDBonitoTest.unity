@@ -495,8 +495,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849058208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.457218, y: 101.26, z: 121.58}
+  m_LocalRotation: {x: -0.03519237, y: 0.774602, z: 0.04327961, w: 0.6299842}
+  m_LocalPosition: {x: -11.750404, y: 92.02726, z: 157.32465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -585,8 +585,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114239968978226944, guid: 8b826a7c5dffaf04d99fa3f39f8d9060, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b826a7c5dffaf04d99fa3f39f8d9060, type: 3}
 --- !u!1 &1189507317
 GameObject:
@@ -725,12 +724,12 @@ PrefabInstance:
     - target: {fileID: 114459675063298188, guid: b85fa43726502410d864f51647f6cd20,
         type: 3}
       propertyPath: inputEditorFPS
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114459675063298188, guid: b85fa43726502410d864f51647f6cd20,
         type: 3}
       propertyPath: FPS
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114459675063298188, guid: b85fa43726502410d864f51647f6cd20,
         type: 3}
@@ -800,7 +799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: b544816461f324e56a39767fdeb5b114, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 103.8
+      value: 96.93
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: b544816461f324e56a39767fdeb5b114, type: 3}
       propertyPath: m_LocalPosition.z

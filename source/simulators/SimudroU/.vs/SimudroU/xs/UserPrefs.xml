@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{B91388C8-EA67-E610-45CF-063433B3CE11}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SimudroU/Scripts/GuideController.cs">
     <Files>
-      <File FileName="Assets/PIDpackage/CubeTest/ScriptsFuerzas/PruebaPID.cs" Line="32" Column="9" />
-      <File FileName="Assets/SimudroU/Scripts/DronePID.cs" Line="21" Column="1" />
-      <File FileName="Assets/PIDpackage/PID/PID.cs" Line="1" Column="10" />
-      <File FileName="Assets/SimudroU/Scripts/GuideController.cs" Line="6" Column="3" />
+      <File FileName="Assets/PIDpackage/CubeTest/ScriptsFuerzas/PruebaPID.cs" Line="28" Column="6" />
+      <File FileName="Assets/SimudroU/Scripts/DronePID.cs" />
+      <File FileName="Assets/PIDpackage/PID/PID.cs" />
+      <File FileName="Assets/SimudroU/Scripts/GuideController.cs" Line="31" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3ef7453e-d39b-4eb8-844a-42aae0e6abda" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ff9db007-3bf6-4c25-ad76-5892444e6a3d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

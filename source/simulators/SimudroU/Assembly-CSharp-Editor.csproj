@@ -325,6 +325,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="DroneControllerPlugin">
+      <HintPath>/Users/alumno/Desktop/dregmli/cognidron/source/simulators/SimudroU/Assets/Drones/DroneController/Plugins/DroneController/DroneControllerPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="DroneControllerEditorPlugin">
+      <HintPath>/Users/alumno/Desktop/dregmli/cognidron/source/simulators/SimudroU/Assets/Drones/DroneController/Editor/DroneControllerEditorPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>/Users/alumno/Desktop/dregmli/cognidron/source/simulators/SimudroU/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -339,12 +345,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>/Users/alumno/Desktop/dregmli/cognidron/source/simulators/SimudroU/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="DroneControllerPlugin">
-      <HintPath>/Users/alumno/Desktop/dregmli/cognidron/source/simulators/SimudroU/Assets/Drones/DroneController/Plugins/DroneController/DroneControllerPlugin.dll</HintPath>
-    </Reference>
-    <Reference Include="DroneControllerEditorPlugin">
-      <HintPath>/Users/alumno/Desktop/dregmli/cognidron/source/simulators/SimudroU/Assets/Drones/DroneController/Editor/DroneControllerEditorPlugin.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2018.4.2f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

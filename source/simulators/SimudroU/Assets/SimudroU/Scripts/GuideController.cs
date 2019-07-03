@@ -36,12 +36,12 @@ public class GuideController : MonoBehaviour
             transf.Translate(new Vector3(0, 0, -1 * speed) * Time.deltaTime);
         }
         //derecha
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.D))
         {
             transf.Translate(new Vector3(speed, 0, 0) * Time.deltaTime);
         }
         //izquierda
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.A))
         {
             transf.Translate(new Vector3(-1 * speed, 0, 0) * Time.deltaTime);
         }
