@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SimudroU/Scenes/DronePIDBonitoTest.unity
+- path: Assets/SimudroU/Scenes/TrainingBasic.unity
   isLoaded: 1
   isActive: 1
