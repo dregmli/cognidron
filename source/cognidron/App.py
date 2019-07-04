@@ -14,11 +14,6 @@ print("")
 print("- hasta aqui todo bien - ")
 
 # Test de comunicación con el simulador
-simulador = SimudrouAdapter()
-simulador.iniciarConexion()
-i = 0
-while i < 100:
-    simulador.enviarMensaje("que ondas!")
-    i += 1
-simulador.cerrarConexion()
-# CentroControlEegSimulador()
+
+
+CentroControlEegSimulador()

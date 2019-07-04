@@ -9,11 +9,12 @@ using UnityEngine;
 public class InterfaceCognidron : RunAbleThread
 {
     public string mensaje = "";
+    private RequestSocket client;
 
     protected override void Run()
     {
         ForceDotNet.Force(); // this line is needed to prevent unity freeze after one use, not sure why yet
-        using (RequestSocket client = new RequestSocket())
+        using (client = new RequestSocket())
         {
             client.Connect("tcp://localhost:5555");
 
@@ -54,4 +55,22 @@ public class InterfaceCognidron : RunAbleThread
     public void pruebaHolaMundo() {
         Debug.Log("ejecutando un metdo de un hilo que esta en run?? O.o");
     }
+
+    public string send(string message)
+    {
+        string response = "";
+        client.SendFrame(message);
+        bool gotMessage = false;
+        gotMessage = client.TryReceiveFrameString(out response); // this returns true if it's successful
+        if (gotMessage)
+        {
+            if (response != null && response != "")
+            {
+                Debug.Log("respuesta: " + response);
+            }
+        }
+
+        return response;
+    }
+    
 }

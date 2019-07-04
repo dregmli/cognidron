@@ -1,10 +1,16 @@
 ﻿<Properties StartupConfiguration="{B91388C8-EA67-E610-45CF-063433B3CE11}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SimudroU/Scripts/DronePID.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SimudroU/Scripts/GuideController.cs">
     <Files>
       <File FileName="Assets/PIDpackage/CubeTest/ScriptsFuerzas/PruebaPID.cs" Line="28" Column="6" />
       <File FileName="Assets/SimudroU/Scripts/DronePID.cs" Line="4" Column="1" />
-      <File FileName="Assets/PIDpackage/PID/PID.cs" />
-      <File FileName="Assets/SimudroU/Scripts/GuideController.cs" Line="16" Column="22" />
+      <File FileName="Assets/PIDpackage/PID/PID.cs" Line="1" Column="1" />
+      <File FileName="Assets/SimudroU/Scripts/GuideController.cs" Line="41" Column="53" />
+      <File FileName="Assets/SimudroU/Scripts/MainTrainingBasic.cs" Line="25" Column="53" />
+      <File FileName="Assets/SimudroU/Scripts/InterfaceCognidron.cs" Line="37" Column="60" />
+      <File FileName="Assets/SimudroU/Scripts/InterfaceCognidronNoThread.cs" Line="55" Column="31" />
+      <File FileName="Assets/SimudroU/Scripts/ManualTrainingBasics.cs" Line="32" Column="35" />
+      <File FileName="Assets/SimudroU/Scripts/interfazAntiguo/InterfazPython.cs" Line="94" Column="1" />
+      <File FileName="Assets/SimudroU/Scripts/interfazAntiguo/PruebaMoverDron.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,18 +25,24 @@
               </Node>
               <Node name="SimudroU" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="DronePID.cs" selected="True" />
+                  <Node name="interfazAntiguo" expanded="True" />
+                  <Node name="GuideController.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="SimudroU" expanded="True" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ff9db007-3bf6-4c25-ad76-5892444e6a3d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2a5e32e4-f491-4218-95da-ad4db2032b87" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

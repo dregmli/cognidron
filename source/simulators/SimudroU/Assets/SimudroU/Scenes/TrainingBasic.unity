@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44658017, g: 0.49641502, b: 0.57482153, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33150264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 9.9, y: 4.36, z: -12.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -215,17 +215,17 @@ PrefabInstance:
     - target: {fileID: 2796738303820390267, guid: ce50b28d11d9140db8857307096d6437,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.59
+      value: 9.96
       objectReference: {fileID: 0}
     - target: {fileID: 2796738303820390267, guid: ce50b28d11d9140db8857307096d6437,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7153444
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 2796738303820390267, guid: ce50b28d11d9140db8857307096d6437,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.67
+      value: -5.1
       objectReference: {fileID: 0}
     - target: {fileID: 2796738303820390267, guid: ce50b28d11d9140db8857307096d6437,
         type: 3}
@@ -269,6 +269,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce50b28d11d9140db8857307096d6437, type: 3}
+--- !u!1 &648434920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2796738303820390266, guid: ce50b28d11d9140db8857307096d6437,
+    type: 3}
+  m_PrefabInstance: {fileID: 381151794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &648434922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648434920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4c1cd5434f1405e98cadfb76473a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entrenamiento: 1
+  speed: 0.4
 --- !u!1001 &1010395039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284,32 +304,32 @@ PrefabInstance:
     - target: {fileID: 7782509725159570019, guid: 5a326b01724634de6b06b7ff5f87e818,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.070798
+      value: 9.959998
       objectReference: {fileID: 0}
     - target: {fileID: 7782509725159570019, guid: 5a326b01724634de6b06b7ff5f87e818,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.8599997
       objectReference: {fileID: 0}
     - target: {fileID: 7782509725159570019, guid: 5a326b01724634de6b06b7ff5f87e818,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.7361708
+      value: -5.0999994
       objectReference: {fileID: 0}
     - target: {fileID: 7782509725159570019, guid: 5a326b01724634de6b06b7ff5f87e818,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7782509725159570019, guid: 5a326b01724634de6b06b7ff5f87e818,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7782509725159570019, guid: 5a326b01724634de6b06b7ff5f87e818,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7782509725159570019, guid: 5a326b01724634de6b06b7ff5f87e818,
         type: 3}
@@ -340,6 +360,10 @@ PrefabInstance:
       propertyPath: guide
       value: 
       objectReference: {fileID: 253461}
+    - target: {fileID: 870471166, guid: 5a326b01724634de6b06b7ff5f87e818, type: 3}
+      propertyPath: pidy.iFactor
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a326b01724634de6b06b7ff5f87e818, type: 3}
 --- !u!1 &1394547980
@@ -441,7 +465,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394547980}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7a8f6db60ff96f4bb33f38e6605e89b, type: 3}
   m_Name: 
