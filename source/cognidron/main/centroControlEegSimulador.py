@@ -1,5 +1,5 @@
 from interfaces.eeg.emotivAdapter import EmotivAdapter
-from interfaces.simulador.simdrouAdapter import SimdrouAdapter
+from interfaces.simulador.simudrouAdapter import SimudrouAdapter
 import json
 import time
 
@@ -12,7 +12,7 @@ class CentroControlEegSimulador:
         eeg = EmotivAdapter()
         eeg.iniciarConexion()
 
-        simu = SimdrouAdapter()
+        simu = SimudrouAdapter()
         simu.iniciarConexion()
 
         # Comenzamos con la intercomunicación

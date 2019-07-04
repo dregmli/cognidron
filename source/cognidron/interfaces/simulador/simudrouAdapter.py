@@ -7,7 +7,7 @@ from interfaces_esp.simulador.simuladorInterfaz import SimuladorInterfaz
 import zmq
 
 
-class SimdrouAdapter(SimuladorInterfaz):
+class SimudrouAdapter(SimuladorInterfaz):
 
     protocol = "tcp"
     port = "5555"

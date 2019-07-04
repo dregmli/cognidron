@@ -1,8 +1,7 @@
 """
 Aplicaciòn principal del Cognidron. Aquí inicia todo.
 """
-from interfaces_gen.comandos.eegGeneral import EegGeneral
-from interfaces_gen.simulador.simuladorGeneral import SimuladorGeneral
+from interfaces.simulador.simudrouAdapter import SimudrouAdapter
 from main.centroControlEegSimulador import CentroControlEegSimulador
 
 print("Inciando Cognidron v0.01")
@@ -10,15 +9,16 @@ print("Inciando Cognidron v0.01")
 
 # Verificar que existan todos los modulos
 
-# Usar el simulador del dron
-# simu = SimuladorGeneral()
 
 print("")
 print("- hasta aqui todo bien - ")
 
-print()
-print("Sigue usar el eeg emotiv")
-
-# eeg = EegGeneral()
-
-CentroControlEegSimulador()
+# Test de comunicación con el simulador
+simulador = SimudrouAdapter()
+simulador.iniciarConexion()
+i = 0
+while i < 100:
+    simulador.enviarMensaje("que ondas!")
+    i += 1
+simulador.cerrarConexion()
+# CentroControlEegSimulador()
