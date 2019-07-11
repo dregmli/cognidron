@@ -1,16 +1,11 @@
 ﻿<Properties StartupConfiguration="{B91388C8-EA67-E610-45CF-063433B3CE11}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SimudroU/Scripts/GuideController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SimudroU/Scripts/Level/LevelInterfacePython.cs">
     <Files>
-      <File FileName="Assets/PIDpackage/CubeTest/ScriptsFuerzas/PruebaPID.cs" Line="28" Column="6" />
-      <File FileName="Assets/SimudroU/Scripts/DronePID.cs" Line="4" Column="1" />
-      <File FileName="Assets/PIDpackage/PID/PID.cs" Line="1" Column="1" />
-      <File FileName="Assets/SimudroU/Scripts/GuideController.cs" Line="41" Column="53" />
-      <File FileName="Assets/SimudroU/Scripts/MainTrainingBasic.cs" Line="25" Column="53" />
-      <File FileName="Assets/SimudroU/Scripts/InterfaceCognidron.cs" Line="37" Column="60" />
-      <File FileName="Assets/SimudroU/Scripts/InterfaceCognidronNoThread.cs" Line="55" Column="31" />
-      <File FileName="Assets/SimudroU/Scripts/ManualTrainingBasics.cs" Line="32" Column="35" />
-      <File FileName="Assets/SimudroU/Scripts/interfazAntiguo/InterfazPython.cs" Line="94" Column="1" />
-      <File FileName="Assets/SimudroU/Scripts/interfazAntiguo/PruebaMoverDron.cs" Line="1" Column="1" />
+      <File FileName="Assets/SimudroU/Scripts/Level/LevelRequesterThread.cs" Line="8" Column="28" />
+      <File FileName="Assets/SimudroU/Scripts/Level/LevelInterfacePython.cs" Line="32" Column="9" />
+      <File FileName="Assets/SimudroU/Scripts/interfazAntiguo/InterfazPython.cs" Line="8" Column="35" />
+      <File FileName="Assets/SimudroU/Scripts/interfazAntiguo/HelloRequester2.cs" Line="17" Column="68" />
+      <File FileName="Assets/SimudroU/Scenes/BarraVida.cs" Line="13" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,25 +19,23 @@
                 <Node name="PID" expanded="True" />
               </Node>
               <Node name="SimudroU" expanded="True">
+                <Node name="Scenes" expanded="True" />
                 <Node name="Scripts" expanded="True">
                   <Node name="interfazAntiguo" expanded="True" />
-                  <Node name="GuideController.cs" selected="True" />
+                  <Node name="Level" expanded="True">
+                    <Node name="LevelInterfacePython.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="SimudroU" expanded="True" selected="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2a5e32e4-f491-4218-95da-ad4db2032b87" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e906b9c2-e15a-47dc-be60-7e7a25a5df06" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -69,6 +69,7 @@
     <Compile Include="Assets\PIDpackage\CubeTest\ScriptsFuerzas\PruebaPID.cs" />
     <Compile Include="Assets\PIDpackage\PID\PID.cs" />
     <Compile Include="Assets\PIDpackage\PID\PIDTest.cs" />
+    <Compile Include="Assets\SimudroU\Scenes\BarraVida.cs" />
     <Compile Include="Assets\SimudroU\Scripts\DronePID.cs" />
     <Compile Include="Assets\SimudroU\Scripts\GuideController.cs" />
     <Compile Include="Assets\SimudroU\Scripts\InterfaceCognidron.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="Assets\SimudroU\Scripts\interfazAntiguo\HelloRequester2.cs" />
     <Compile Include="Assets\SimudroU\Scripts\interfazAntiguo\InterfazPython.cs" />
     <Compile Include="Assets\SimudroU\Scripts\interfazAntiguo\PruebaMoverDron.cs" />
+    <Compile Include="Assets\SimudroU\Scripts\Level\LevelInterfacePython.cs" />
+    <Compile Include="Assets\SimudroU\Scripts\Level\LevelRequesterThread.cs" />
     <Compile Include="Assets\SimudroU\Scripts\MainTrainingBasic.cs" />
     <Compile Include="Assets\SimudroU\Scripts\ManualTrainingBasics.cs" />
     <Compile Include="Assets\SkythianCat\Glowing_Forest\Scripts\WaterGroup.cs" />
