@@ -5,7 +5,7 @@
 import sys 
 
 #esto es temporal, mientras no se corre el mainpy desde el root de cognidron
-sys.path.append("D:\\Usuarines\\mora dulce\\Documentox\\PythonProjects\\Cognidron Dev\\source\\cognidron\\gui\\ventanas")
+sys.path.append("/Users/alumno/Desktop/dregmli/cognidron/source/cognidron/gui/views")
     
 print(sys.path)
 
