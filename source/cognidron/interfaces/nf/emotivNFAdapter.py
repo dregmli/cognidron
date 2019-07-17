@@ -14,11 +14,16 @@ class EmotivNFAdapter(NFInterface):
     Clase para conectar Cognidron con el headset de Emotiv implementando el API de Emotiv Cortex V2.0
     y utilizar las bandas para Neurofeedback TBR.
 
-    Fecha: Jueves 11 Juliso 2019
+    Fecha: Jueves 11 Julio 2019
     Author: dregmli
 
     Basado en la clase EmotivAdapater, con modificaciones para usarlo solo con las bandas de frecuencia.
 
+    Intrucciones para usar:
+    1) nf = EmotivNFAdapter()
+    2) nf.startConnection()
+    3) nf.recievePow() para obtener las bandas, utilizar cada que se desee actualizar.
+    4) nf.closeConnection() al terminar
     """
 
 
@@ -38,6 +43,7 @@ class EmotivNFAdapter(NFInterface):
     headset = ""
     sesion = ""
     lstCanales = None
+    connected = False
 
     ws = None
 
@@ -56,6 +62,7 @@ class EmotivNFAdapter(NFInterface):
             self.ws = create_connection(self.URLwebsocket, sslopt={"cert_reqs": ssl.CERT_NONE})
             self.connected = True  # Importante que vaya aqui, para que pueda funconar iniciarSesion()
             self.__startSession()
+            self.connected = True
         except:
             self.connected = False
             print("Error!!: al conectarse como websocket client a " + self.URLwebsocket)

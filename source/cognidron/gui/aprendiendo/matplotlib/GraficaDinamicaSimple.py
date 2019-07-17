@@ -10,7 +10,7 @@ xdata = []
 ydata = [] 
 def next():
    i = 0
-   while i &lt;= COUNT:
+   while i <= COUNT:
       i += 1
       yield i
 def update(i):

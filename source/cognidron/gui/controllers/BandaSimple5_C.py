@@ -13,7 +13,14 @@ import pyqtgraph as pg
 from gui.views.BandaSimple5 import *
 
 
-class MyWin(QtWidgets.QMainWindow):
+class BandaSimple5_C(QtWidgets.QMainWindow):
+    """
+        Clase controlador de la vista BandaSimple5.
+        Aqui se agregan 5 gráficas de pyqtgraph en una ventana de pytq5. Tales gráficas llevan los datos obtenidos de
+        las bandas de frecuencia del dispositiov Emotiv Epoc + usando el API de Cortex v2.0
+    """
+
+    hilo = None
 
     def __init__(self, parent=None):
 
@@ -33,15 +40,15 @@ class MyWin(QtWidgets.QMainWindow):
         data = np.random.normal(size=(10, 1000))
         ptr = 0
         self.ui.grafica = widget
-        self.ui.grafica.setGeometry(QtCore.QRect(200, 10, 400, 400))
+        self.ui.grafica.setGeometry(QtCore.QRect(160, 50, 850, 110))
         self.ui.grafica.setObjectName("miGrafica")
 
         p6 = widget
 
         # Generar hilo para graficar
         self.funcionx()
-        hilo = MiHilo(ptr, p6, curve, data)
-        hilo.start()
+        self.hilo = MiHilo(ptr, p6, curve, data)
+        self.hilo.start()
 
         # self.ui.btnBoton2 = QtWidgets.QPushButton(self.ui.centralwidget)
         # self.ui.btnBoton2.setGeometry(QtCore.QRect(60, 60, 75, 23))
@@ -55,12 +62,22 @@ class MyWin(QtWidgets.QMainWindow):
         print("me diste un clic")
 
 
-import threading
+    def closeEvent(self, event):  # Se ejecuta al cerrar la ventana
+        print("Cerrando ventana de 5 bandas.........")
+        self.hilo.nf.closeConnection()
+        self.deleteLater()
 
+
+import threading
+from interfaces.nf.emotivNFAdapter import EmotivNFAdapter
 
 class MiHilo(threading.Thread):
     breaker = 1000000
     n = 0
+    bands = None
+    # el data para la grafica debe ser un array numpy
+    array_y = [1.0, 0]
+
 
     def __init__(self, ptr, p6, curve, data):
         super().__init__(
@@ -70,19 +87,36 @@ class MiHilo(threading.Thread):
         self.curve = curve
         self.data = data
 
+        # Iniciar conexión con Emotiv para obetner las bandas
+        self.nf = EmotivNFAdapter()
+        # self.nf.startConnection()
+
+
+
+
+
     def update(self):
-        print("esto se ejecuta? " + str(self.ptr))
-        self.curve.setData(self.data[self.ptr % 10])
+        #print("esto se ejecuta? " + str(self.ptr))
+
+        # Obtener los potenciales de las bandas de frecuencia
+        #self.bands = self.nf.receivePow()
+        #n = self.bands['AF3/theta']
+        #self.array_y.append(n)
+
+        
+
+        self.curve.setData(self.array_y) # self.data[self.ptr % 10]
+        """
         if self.ptr == 0:
             self.p6.enableAutoRange('xy', False)  ## stop auto-scaling after the first data set is plotted
         self.ptr += 1
+        """
 
     def run(self):
         while self.n < self.breaker:
             self.n += 1
             self.update()
-            time.sleep(0.02)
-            print("####")
+            time.sleep(0.1)
 
 
 

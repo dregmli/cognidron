@@ -5,7 +5,7 @@ import sys
 
 app = QtWidgets.QApplication(sys.argv)
 print("1: esto si sucede")
-myapp = MyWin()
+myapp = BandaSimple5_C()
 print("2: esto si sucede")
 myapp.show()
 
