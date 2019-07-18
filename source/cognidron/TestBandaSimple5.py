@@ -1,5 +1,5 @@
 
-from gui.controllers.BandaSimple5_C import *
+from gui.controllers.bandaSimple5_C import *
 import sys
 
 
